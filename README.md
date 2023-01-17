@@ -27,7 +27,7 @@ Images    | Image Files and Folders not included on github
  
  Developer: Sarah Bass
  
- Link: [https://gallery.fitbit.com/details/7be8e15d-b779-40bc-910a-382b8127a3b9]
+ Link: [https://gallery.fitbit.com/details/f1508879-ab9f-460c-9c85-7c0e44681681]
  
  Price : FREE
  
