@@ -77,3 +77,8 @@ Pixel Pets are All Original Designs
 ### Game Over
 
 ![Alt text](https://github.com/SarahBass/Galaxy-Pixel-Pet/blob/main/Promo/473917E3-9E24-4860-AFEE-7A9C542E644B.png)
+
+
+### Sleep Screen
+
+![Alt text](https://github.com/SarahBass/Galaxy-Pixel-Pet/blob/main/Promo/1EC68961-7F57-4808-B2F1-EFF45811E13C.png)
