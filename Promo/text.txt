@@ -1,1 +1,61 @@
-.
+https://github.com/SarahBass/downloadFitbitClock#readme
+
+Earn steps to power up your very own Pixel Pet!
+
+Galaxy Pixel Pet is based on the old-school 'virtual pet' craze of the 90's. Galaxy Pixel Pet starts as an egg, hatches, evolves, and finally grows into a cute digital monster. When you reach your step goal, your pet will be fully transformed! Look at the heart meter to keep track of your progress.  Clean up after your pet by shaking your wrist. The cleaner the pet, the nicer its final form will be!
+
+This is a free clockface only, and it is not the full game. The buttons and games are not activated for this free BETA version of the clockface. Background color changes daily. When you click the buttons, the screen displays the time, date, and all of your daily statistics. Checking your screen gives the pet rest, and earns it bonus points. 
+
+Shake wrist to scare away the planet's monsters and protect your little pet!
+
+Pixel Pets are All Original Designs
+--------------------------------------------
+0 Hearts: 3 Eggs
+
+1 Heart : 3 Baby Space Bears
+
+2 Hearts : 3 Mini Space Bears
+
+3 Hearts : 3 Master Space Bears
+
+4 Hearts: 3 Robot Bears
+
+5 Hearts : 3 Ghost Planets
+
+------------------STATS------------------
+
+Clock: 12 Hour or 24 Hour
+
+Walk: Miles or KM
+
+Fire : Total Daily Calories Burned
+
+Stairs: Total Daily Floors
+
+Bolt: Total Daily Active Minutes
+
+Heart : Heart Rate (Click Star to Start)
+
+Footprints: Total Daily Steps
+
+Red Hearts: Percent% of your Steps Goal
+
+___________________________
+
+Characters: Featuring 'Baby Bear', 'Pawa', 'Bear-baka', 'Princess Panda', 'Bear Bear Jinks', 'Rawr Two Beep Two', 'Dark Taper', Bear Robot Samari, and other fun galaxy bears.   
+
+Settings: If set active, goal, and calorie permissions are not turned on, it will print "Nan", "Null", or "0". Heart Rate activated when you click Star, click again to turn off to save battery. Heart monitor turns on when it senses change.
+
+----LARGE DOWNLOAD SIZE ----
+
+Click Website for download support or large files. For best results, connect watch to charger and download while using a strong wifi connection. Slow Download.
+
+UPDTATES :
+
+Free Beta Version is new for 2023 release, and may need updates to fix small errors. Click 'Update' to get the newest version if available. 
+
+---NOTE FROM DEVELOPER--
+
+The PAID version features food items, sleep mode, a mini game, medicine, bath, stats, and discipline modes. It will have two working buttons to toggle through the options.  Press the middle of the screen to show your Distance, Stairs, Calories, Active Zone, and Heart Rate. It has 10 eggs, 10 baby dinosaurs , 10 mini dinosaurs, 10 cute dinosaurs, 10  adult dinosaurs, and 5 Fossils. It also has a daily changing color background with 8 new backgrounds.  
+
+PAID version is $2 USD.    
