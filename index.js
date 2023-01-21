@@ -127,27 +127,13 @@ if (userActivity.adjusted.steps > goals.steps){background.image = "gameover.jpeg
   else{background.image = days + ".jpeg";}
   
  //Pet creates waste based on steps
- if ((userActivity.adjusted.steps%50) == 0){poops++;}
+ if ((userActivity.adjusted.steps%20) == 0){poops++;}
   if (poops <= 0 ) {poops = 0;}
   if (poops >= 5){poops = 5}
-  
-   //Pet gets annoyed based on steps
- //if ((userActivity.adjusted.steps%50) == 0){annoy++;}
- //if (annoy <= 0 ) {annoy = 0;}
- //if (annoy >= 5){annoy = 5}
   
   //Not Cleaning makes Pet Naughty to level 1000
   if ( petnaughty >= 1000){petnaughty = 1000;}
   if (petnaughty <= 0){petnaughty = 0;}
-  
-  //Sleeping increases cuteness level of form to level 1000
-  //if (basic >= 1000){basic = 1000;}
-  //if (basic <= 0){basic = 0;} 
-  
-    //Annoying Critters increases sadness
-  //if (sad >= 1000){sad = 1000;}
-  //if (sad <= 0){sad = 0;} 
-  
   
         //Move hand to clean Pet Poop only if poop level is more than 0
     //Reduce Accelerometer as much as possible and use batches and lower frequency
@@ -159,8 +145,7 @@ if ((poops > 0) && (userActivity.adjusted.steps < goals.steps) ){
    //console.log("Basic Level: " + basic);
    const accelerometer = new Accelerometer({ frequency: 30, batch: 60 });
    accelerometer.addEventListener("reading", () => { 
-    if (accelerometer.y > 4){   
-      //annoy--;
+    if (accelerometer.y > 6){   
       poops--;}
   });  
     display.addEventListener("change", () => {
@@ -238,16 +223,13 @@ if ((poops > 0) && (userActivity.adjusted.steps < goals.steps) ){
     }
 
     //last else statement 
-  else {if (seconds % 2 == 0){poop.image = "blank.png";}
-     else{poop.image = "blank.png";}}
+  else {poop.image = "blank.png";}
+     
 
  //Reset stats at midnight
 if ((util.zeroPad(hours) == 0)&& (mins == 1)){
   petnaughty = 0;
   poops = 0;
-  //basic = 0;
-  //sad = 0;
-  //annoy= 0;
 }
   
   
@@ -261,8 +243,7 @@ button1.onclick = function(evt) { buttonnumber++; }
                     heartlabel.class  = "labelseeblue";
                     stairslabel.class  = "labelseeblue";
                     evolution.class = "none";
-                   // basic++;
-                    
+                    petnaughty--;
                       if (seconds % 2 == 0){object.image = "read.jpeg";}
                       else{object.image = "read1.jpeg";}
   }else{
@@ -279,15 +260,9 @@ button1.onclick = function(evt) { buttonnumber++; }
   
   //Change version number based on stats
  
-    
-    //if (basic > age) { 
     if (petnaughty > age){version = 0;}
     else {version = 1;}
-   // }else {version=0;}
-     
-  //0 is worst looking 
-  //1 is best and good
-  //2 is best and bad
+
 
     //----------Pet Evolution Baby Pet -------------------
   
@@ -297,19 +272,19 @@ pet.image = "pet/pet" + pets + "v" + version + "a" + seconds%2 + ".png";
     //----------Pet Evolution Egg -------------------
   if (userActivity.adjusted.steps < goals.steps/5){
   pets = 0;
-  age = 100;}
+  age = 20;}
   
    //----------Pet Evolution baby Pet -------------------
   else if ((userActivity.adjusted.steps < ((goals.steps)*2)/5) && (userActivity.adjusted.steps > ((goals.steps*1)/5))) {
          pets = 1;
-         age = 200;
+         age = 30;
   }
   
   //----------Pet Evolution baby Pet -------------------
   
   else if ((userActivity.adjusted.steps < ((goals.steps)*3)/5)&& (userActivity.adjusted.steps > ((goals.steps*2)/5))){
          pets = 2;
-         age = 300;
+         age = 40;
   }
   
     //----------Pet Evolution Adult Pet -------------------
@@ -317,7 +292,7 @@ pet.image = "pet/pet" + pets + "v" + version + "a" + seconds%2 + ".png";
   else if ((userActivity.adjusted.steps < ((goals.steps)*4)/5)&& (userActivity.adjusted.steps > ((goals.steps*3)/5)))
            {
              pets = 3;
-             age = 400;
+             age = 50;
            }
   
     //----------Pet Evolution Robot Pet -------------------
@@ -325,14 +300,14 @@ pet.image = "pet/pet" + pets + "v" + version + "a" + seconds%2 + ".png";
   else if ((userActivity.adjusted.steps < goals.steps)&& (userActivity.adjusted.steps > ((goals.steps*4)/5)))
            {
              pets = 4;
-             age = 500;
+             age = 60;
            }
   //---------Game Over Pet ------------------
   
   else if (userActivity.adjusted.steps > goals.steps){
     
     pets = 5;
-    age = 600;
+    age = 50;
     
   } else { if (seconds % 2 == 0){pet.image = "pet/pet1animate0.png";}
      else{pet.image = "pet/pet1animate1.png";}}
