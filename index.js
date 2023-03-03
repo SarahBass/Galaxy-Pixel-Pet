@@ -1,7 +1,7 @@
 /*
 ----------------------------------------------
  *  Project:   Pixel Pet Clock Face
- *  Mail:       darahbass@gmail.com
+ *  Mail:       VirtualStarWatch@gmail.com@gmail.com
  *  Github:     SarahBass
  ---------------------------------------------
  NOTES: 
