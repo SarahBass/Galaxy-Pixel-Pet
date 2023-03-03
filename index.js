@@ -1,8 +1,8 @@
 /*
 ----------------------------------------------
  *  Project:   Pixel Pet Clock Face
- *  Mail:       VirtualStarWatch@gmail.com@gmail.com
- *  Github:     SarahBass
+ *  Mail:      VirtualStarWatch@gmail.com
+ *  Github:    SarahBass
  ---------------------------------------------
  NOTES: 
  This Clock will be larger than normal
