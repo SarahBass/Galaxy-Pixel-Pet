@@ -33,6 +33,12 @@ import { Accelerometer } from "accelerometer";
 let daytext = "day";
 let monthtext = "month";
 let goalreached = "NONE";
+let buttonnumber = 0;
+let poops = 0;
+let petnaughty = 0;
+let pets = 0;
+let version = 0;
+let age = 0;
 
 
 /*--- Import Information from index.gui ---*/
@@ -44,15 +50,7 @@ let date = document.getElementById("date");
 let pet = document.getElementById("pet");
 let object = document.getElementById("object");
 let poop = document.getElementById("poop");
-let buttonnumber = 0;
-let poops = 0;
-let petnaughty = 0;
-//let basic = 0;
-let pets = 0;
-let version = 0;
-//let annoy = 0;
-//let sad = 0;
-let age = 0;
+
 
 //Update the clock every second 
 clock.granularity = "seconds";
@@ -66,11 +64,16 @@ const boltlabel = document.getElementById("boltlabel");
 const heartlabel = document.getElementById("heartlabel");
 const stairslabel = document.getElementById("stairslabel");
 const distancelabel = document.getElementById("distancelabel");
+
+//import button
 const button1 = document.getElementById("button-1");
+
+//import animation 
 var demoinstance = document.getElementById("demoinstance");
 var demogroup = demoinstance.getElementById("demogroup");
 
-  
+  /*--- Heart Rate START ---*/
+
   if (HeartRateSensor && appbit.permissions.granted("access_heart_rate")) {
    const hrm = new HeartRateSensor();
   hrm.addEventListener("reading", () => {
@@ -84,10 +87,14 @@ var demogroup = demoinstance.getElementById("demogroup");
   hrm.start();
   }else {heartlabel.text = "off";}
 
-
+/*-------------- end --------------*/
 
 /*--- CLOCK START ---*/
+
 clock.ontick = (evt) => {
+
+
+//Update Data
 
   let today = evt.date;
   let hours = today.getHours();
@@ -98,28 +105,49 @@ clock.ontick = (evt) => {
   let mins = util.zeroPad(today.getMinutes());
   let seconds = today.getSeconds();
   
+//enable animation 
   demoinstance.animate("enable"); 
 
  /*--- Update Stats for Screen ---*/
   updateScene();
+
+//uses settings to change units
   if (units.distance == "us"){
   distancelabel.text = (0.000621371 * userActivity.adjusted.distance).toFixed(1) + " mi";}
   else {distancelabel.text = (0.001 * userActivity.adjusted.distance).toFixed(1) + " km";}
 
+
+//updates text labels
   stairslabel.text = userActivity.adjusted.elevationGain;
   stepsLabel.text = userActivity.adjusted.steps;
   firelabel.text = userActivity.adjusted.calories;
  // targetlabel.text = parseInt(userActivity.adjusted.steps/goals.steps * 100) + "%";
   boltlabel.text = userActivity.adjusted.activeZoneMinutes.total;
   heartlabel.text = "off";  
-  checkAndUpdateBatteryLevel();
+  
+
+
+  /*--- Update Battery Functions ---*/
+checkAndUpdateBatteryLevel();
+ display.addEventListener('change', function () { if (this.on) {checkAndUpdateBatteryLevel();}
+  
+   /*--- TIME Updates FOR 12 HOUR CLOCK---*/
+  //set class of each # IMAGE individually if needed for formatting
+  if (preferences.clockDisplay === "12h") {
+    // 12h format
+    hours = hours % 12 || 12;
+  }else {hours = util.zeroPad(hours);}
+  myLabel.text = `${hours}:${mins}`; 
+
+  /*----------------------------Update CLOCK END----------------------------------*/                      
+
 
 
   
   //AM PM -Change the image based on 24 hours
-  if (util.zeroPad(hours) >= 12){ampm.text = "PM";}
-  else{ampm.text = "AM";}
   
+if (util.zeroPad(hours) >= 12){ampm.text = "PM";}
+  else{ampm.text = "AM";}
   
   //Backgrounds based on day. Game Over has special background
 
@@ -325,19 +353,7 @@ pet.image = "pet/pet" + pets + "v" + version + "a" + seconds%2 + ".png";
   else {evolution.text = "";}
 
  
-  
-   /*--- OPTION 2: TIME IMAGES FOR 12 HOUR CLOCK---*/
-  //set class of each # IMAGE individually if needed for formatting
-  if (preferences.clockDisplay === "12h") {
-    // 12h format
-    hours = hours % 12 || 12;
-  }else {hours = util.zeroPad(hours);}
-  myLabel.text = `${hours}:${mins}`; 
-  /*----------------------------SHOW CLOCK END----------------------------------*/                      
 
-/*
-  /*--- Battery Functions ---*/
-  display.addEventListener('change', function () { if (this.on) {checkAndUpdateBatteryLevel();}
                                              
 });
 /*----------------------------END OF ON TICK-----------------------------------*/
